@@ -16,3 +16,80 @@ class User(UserMixin,db.Model):
     case = db.relationship('Case',backref='user',lazy='dynamic')
     comment = db.relationship('Comment',backref='user',lazy='dynamic')
 
+    @property
+    def password(self):
+        raise AttributeError('You cannot read the password attribute')
+
+    @password.setter
+    def password(self,password):
+        self.hashed_password=generate_password_hash(password)
+
+    def verifry_password(self,password):
+        return check_password_hash(self.hashed_password,password)
+
+    def save_user(self):
+        db.session.add(self)
+        db.session.commit()
+        
+    def __repr__(self):
+        return f"User {self.username}"
+
+class Case(db.Model):
+    __tablename__='cases'
+    id = db.Column(db.Integer,primary_key=True)
+    title = db.Column(db.String(255),nullable=False)
+    content = db.Column(db.Text(),nullable=False)
+    posted = db.Column(db.DateTime,default = datetime.utcnow)
+    user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
+    comment = db.relationship('Comment',backref='case',lazy='dynamic')
+
+    def save_cases(self):
+        db.session.add(self)
+        db.session.commit()
+
+    def __repr__(self):
+        return f'Case {self.post}'
+
+class Comment(db.Model):
+    __tablename__='comments'
+
+    id = db.Column(db.Integer,primary_key=True)
+    comment = db.Column(db.Text(),nullable = False)
+    posted = db.Column(db.DateTime,default = datetime.utcnow)
+    user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
+    case_id = db.Column(db.Integer,db.ForeignKey('cases.id'))
+
+
+    def save_comments(self):
+        db.session.add(self)
+        db.session.commit()
+
+    @classmethod
+    def get_comments(cls,case_id):
+        comments = Comment.query.filter_by(case_id=case_id).all()
+        return comments
+
+    def __repr__(self):
+        return f'Case {self.post}'
+
+class Upvote(db.Model):
+    __tablename__='upvotes'
+
+    id = db.Column(db.Integer,primary_key=True)
+    user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
+    case_id = db.Column(db.Integer,db.ForeignKey('cases.id'))
+
+    def save_votes(self):
+        db.session.add(self)
+        db.session.commit()
+
+    @classmethod
+    def get_votes(cls,id):
+        votes = Upvote.query.filter_by(case_id=id).all()
+        return votes
+
+    def __repr__(self):
+        return f'{self.user_id}:{self.case_id}'
+
+
+
