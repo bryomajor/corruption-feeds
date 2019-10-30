@@ -1,6 +1,6 @@
 import os
 class Config:
-    pass
+    UPLOADED_PHOTOS_DEST='app/static/photos'
 
 class ProdConfig(Config):
     pass
