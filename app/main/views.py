@@ -1,7 +1,8 @@
 from app.main import main
 from flask import render_template, abort
-from .forms import ReviewForm,UpdateProfile
+from .forms import UpdateProfile
 from .. import db, photos
+from flask_login import login_required
 
 @main.route('/')
 def index():
