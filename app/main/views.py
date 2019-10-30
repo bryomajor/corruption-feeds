@@ -1,12 +1,14 @@
 from app.main import main
-from flask import render_template, abort
-from .forms import ReviewForm,UpdateProfile
-from .. import db, photos
+from flask import render_template, abort,request,redirect,url_for
+from flask_login import login_user,login_required,logout_user
+from .forms import UpdateProfile
+from app.models import User
+from .. import db,photos
 
 @main.route('/')
 def index():
-    return '<h1>Test</h1>'
-
+    
+    return render_template('index.html')
 
 @main.route('/user/<uname>')
 def profile(uname):
