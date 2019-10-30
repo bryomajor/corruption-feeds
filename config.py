@@ -1,8 +1,6 @@
 import os
 class Config:
-    UPLOADED_PHOTOS_DEST='app/static/photos'
-    SECRET_KEY='noneofyb'
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://byrone:Albert254@localhost/feeds'
+    pass
 
 class ProdConfig(Config):
     pass
