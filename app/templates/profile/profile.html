@@ -2,10 +2,10 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-            <h3> {{ user.username | capitalize }}</h3>
+            <h3> {{ user.username | capitalize }}</h3> -->
 
             <!-- DIsplaying user bio -->
-            {% if user.bio %}
+             {% if user.bio %}
                 <p>{{ user.bio }}</p>
             {% else %}
                 <p>{{ user.username| capitalize }} has no bio</p>
@@ -13,7 +13,7 @@
         </div>
 
         <!-- Display profile photo -->
-        <div class="col-md-4">
+         <div class="col-md-4">
             {% if user.profile_pic_path %}
             <img src="{{ url_for('static', filename=user.profile_pic_path) }}" alt="" class="img-thumbnail">
             {% else %}
@@ -36,4 +36,4 @@
         </div>
     </div>
 </div>
-{% endblock %}
+{% endblock %} -->
