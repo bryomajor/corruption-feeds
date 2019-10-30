@@ -1,8 +1,10 @@
 from flask import Flask 
 from config import config_options
 from flask_bootstrap import Bootstrap
+from flask_uploads import UploadSet, configure_uploads, IMAGES
 
 bootstap = Bootstrap()
+photos = UploadSet('photos', IMAGES)
 
 def create_app(config_name):
     app = Flask(__name__)
@@ -10,7 +12,9 @@ def create_app(config_name):
     from .auth import auth as authentication_blueprint
     from .main import main as main_blueprint
     bootstap.init_app(app)
-    # configure_uploads(app,photos)
+
+    # Configure UploadSet
+    configure_uploads(app,photos)
 
 
     app.register_blueprint(authentication_blueprint)
