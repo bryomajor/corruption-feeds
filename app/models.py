@@ -37,6 +37,7 @@ class User(UserMixin,db.Model):
 
 class Case(db.Model):
     __tablename__='cases'
+    
     id = db.Column(db.Integer,primary_key=True)
     title = db.Column(db.String(255),nullable=False)
     content = db.Column(db.Text(),nullable=False)
@@ -91,6 +92,5 @@ class Upvote(db.Model):
 
     def __repr__(self):
         return f'{self.user_id}:{self.case_id}'
-
 
 
