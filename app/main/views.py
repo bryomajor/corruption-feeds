@@ -1,13 +1,21 @@
 from app.main import main
+<<<<<<< HEAD
 from flask import render_template, abort
 from .forms import UpdateProfile
 from .. import db, photos
 from flask_login import login_required
+=======
+from flask import render_template, abort,request,redirect,url_for
+from flask_login import login_user,login_required,logout_user
+from .forms import UpdateProfile
+from app.models import User
+from .. import db,photos
+>>>>>>> 6b73532c252dc58e1fb5afc577f45b325ac14f20
 
 @main.route('/')
 def index():
-    return '<h1>Test</h1>'
-
+    
+    return render_template('index.html')
 
 @main.route('/user/<uname>')
 def profile(uname):
