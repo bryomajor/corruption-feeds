@@ -16,6 +16,7 @@
           </a>
           <p class="post-meta">Posted by {{post.user.username}} on {{post.posted.strftime('%B %d, %Y')}}</p>
         </div>
+        <span class="foot" > <a href="{{url_for('main.like',id = case.id)}}"><i class="fa fa-thumbs-up" style="font-size:18px;color: green"></i></a> {{case.upvote.count()}}</span>
         <hr>
         {% endfor %}
         <hr>
