@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block content%}
+<header class="masthead" >
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+              <div class="page-heading">
+                    {{ wtf.quick_form(comment_form) }}
+                <span class="subheading"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+{% endblock %}
