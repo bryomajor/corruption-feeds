@@ -1,7 +1,7 @@
 from flask import render_template,redirect,url_for, abort,request,flash
 from . import main
 from .forms import CommentsForm, UpdateProfile, CaseForm
-from ..models import User, Case,Comment
+from ..models import User, Case,Comment,Upvote
 from flask_login import login_required, current_user
 from .. import db, photos
 import markdown2
