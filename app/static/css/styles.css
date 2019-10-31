@@ -1,3 +1,13 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+
 header.masthead {
     margin-bottom: 50px;
     background: no-repeat center center;
@@ -96,3 +106,81 @@ header.masthead {
       font-size: 30px;
     }
   }
+
+  .post-preview > a {
+    color: #212529;
+  }
+  
+  .post-preview > a:focus, .post-preview > a:hover {
+    text-decoration: none;
+    color: #0085A1;
+  }
+  
+  .post-preview > a > .post-title {
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .post-preview > a > .post-subtitle {
+    font-weight: 300;
+    margin: 0 0 10px;
+  }
+  
+  .post-preview > .post-meta {
+    font-size: 18px;
+    font-style: italic;
+    margin-top: 0;
+    color: #868e96;
+    font-family: 'Lora', 'Times New Roman', serif;
+  }
+  
+  .post-preview > .post-meta > a {
+    text-decoration: none;
+    color: #212529;
+  }
+  
+  .post-preview > .post-meta > a:focus, .post-preview > .post-meta > a:hover {
+    text-decoration: underline;
+    color: #0085A1;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .post-preview > a > .post-title {
+      font-size: 36px;
+    }
+  }
+
+  .btn {
+    background-color: #ffc107 !important;
+    border-color: #ffc107 !important;
+    color: #212529 !important;
+  }
+
+  .btn:hover, .btn:focus {
+    background-color: #fd7e14 !important;
+    border-color: #fd7e14 !important;
+    color: #212529 !important;
+  }
+
+  .btn-outline-white {
+    background-color: transparent !important;
+    border-color: #ffffff !important;
+    color: #ffffff !important;
+  }
+
+  .shortlist > li > h6 > a {
+    text-decoration: none;
+    color: #212529;
+  }
+
+  .shortlist > li > h6 > a:hover, .shortlist > li > h6 > a:focus {
+    color: #0085A1;
+  }
+
+  .meta {
+    font-size: 12px;
+    font-style: italic;
+    margin-top: 0;
+    color: #868e96;
+    font-family: 'Lora', 'Times New Roman', serif;
