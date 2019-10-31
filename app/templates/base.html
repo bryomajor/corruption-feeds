@@ -25,9 +25,17 @@
    {% endblock %}
    
 
+    {% block modal %}
+        {% include 'modals.html' %}
+    {% endblock %}
+
     {% block content %}
     
     {% endblock%}
+    
+    {% block footer %}
+    {% include 'footer.html' %}
+    {% endblock %}
 
     {% block footer %}
     {% include 'footer.html' %}
