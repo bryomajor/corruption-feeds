@@ -45,7 +45,6 @@ def add():
 
 
 @main.route('/pitch/comments/new/<int:id>',methods = ['GET','POST'])
-@login_required
 def new_comment(id):
     form = CommentsForm()
    
@@ -126,4 +125,17 @@ def delete_post(post_id):
     flash('Your post has been deleted!', 'success')
     return redirect(url_for('main.index'))
 
-
+@main.route('/like/<int:id>',methods=['GET','POST'])
+@login_required
+def like(id):
+    get_cases = Upvote.get_upvotes(id)
+    valid_string = f'{current_user.id}:{id}'
+    for pit in get_cases:
+        to_str = f'{pit}'
+        if valid_string == to_str:
+            return redirect(url_for('main.index',id=id))
+        else:
+            continue
+    new_vote = Upvote(user=current_user,case_id=id)
+    new_vote.save_votes()
+    return redirect(url_for('main.index',id=id))
