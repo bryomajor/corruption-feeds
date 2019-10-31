@@ -4,15 +4,19 @@
 <main>
   <div class="container-fluid">
     <div class="row pb-5">
-      {% for post in posts %}
       <div class="col-md-3 ml-3 mt-4">
         <h2>Trending Cases</h2>
         <hr>
         <ul class="shortlist">
-          <li><h6><a href="{{ url_for('main.post', post_id=post.id)}}">{{post.title}}</a></h6></li>
+          {% for post in posts %}
+          <li>
+            <h6><a href="{{ url_for('main.post', post_id=post.id)}}">{{post.title}}</a></h6>
+          </li>
+          {% endfor %}
         </ul>
       </div>
       <div class="col-lg-7 col-md-8 mx-auto mt-1">
+        {% for post in posts %}
         <div class="post-preview">
           <a href="{{ url_for('main.post', post_id=post.id)}}">
             <h2 class="post-title">
@@ -25,8 +29,8 @@
           <p class="post-meta">Posted by {{post.user.username}} on {{post.posted.strftime('%B %d, %Y')}}</p>
         </div>
         <hr>
+        {% endfor %}
       </div>
-      {% endfor %}
       <div class="col-md-3">
         <div class="w-50">
           {% for message in get_flashed_messages() %}
