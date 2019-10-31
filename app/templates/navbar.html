@@ -1,11 +1,11 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">  
     <div class="collapse navbar-collapse" id="navbarColor02">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('main.index')}}"><i class="fas fa-home"></i> Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('main.add')}}">Report Here</a>
+          <a class="nav-link" href="{{ url_for('main.add')}}"><i class="fas fa-paper-plane"></i> Report Here</a>
         </li>
 
       </ul>
@@ -27,7 +27,7 @@
                 </ul>
               {% else %}
               <li class="nav-item">
-                  <a  class="nav-link mr-1" href="{{url_for('auth.signup')}}}" ><i class="fas fa-user-plus"></i></i>&nbsp; <strong>Sign Up</strong></a>
+                  <a  class="nav-link mr-1" href="{{url_for('auth.signup')}}" ><i class="fas fa-user-plus"></i></i>&nbsp; <strong>Sign Up</strong></a>
               </li>
               <li class="nav-item">
                   <a  class="nav-link mr-5" href="{{url_for('auth.login')}}" ><i class="fas fa-sign-in-alt "></i>&nbsp; <strong>Log In</strong></a>
