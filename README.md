@@ -60,7 +60,9 @@ No known bug
 This project is Licensed under MIT.
 ©2019 Copyright.
 ### Collaborate
->To Collaborate, Reach me out at:
->>Github: [Jmos-Mbugua](https://github.com/Jmos-Mbugua)
->>Email: johnmbugua849@gmail.com
+>To Collaborate, Reach us at:
+>>Github: 
+>> [Jmos-Mbugua](https://github.com/Jmos-Mbugua)
+>> [Albert-Byrone](https://github.com/Albert-Byrone)
+>>[Brian Major](https://github.com/bryomajor)
 
