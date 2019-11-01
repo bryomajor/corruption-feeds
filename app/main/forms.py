@@ -14,7 +14,7 @@ class UpdateProfile(FlaskForm):
 
 
 class CaseForm(FlaskForm):
-    title = StringField('Enter title',validators = [Required()])
-    subtitle= StringField('Enter subtitle',validators = [Required()])
-    content = TextAreaField('make a case', validators=[Required()])
+    title = StringField('Enter Title',validators = [Required()])
+    subtitle= StringField('Enter Location',validators = [Required()])
+    content = TextAreaField('Make a Case', validators=[Required()])
     submit = SubmitField('Create Case')
