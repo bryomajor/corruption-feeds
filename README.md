@@ -1,26 +1,26 @@
-# TheBlog
+# Corruption Feed
 
-TheBlog is a web application that allows users to express themselves through writing articles and posting the in the application. 
+Corruption Feed is an application that allow users to expose corruption cases within the country.Other users can view the cases and make comments. 
 ### Author
+* Albert Byrone
 * John Mbugua
+* Brian Major
 
 ### Features
 As a user of the application, you will be able to:
-> * See different posts posted by other users
-> * Post your own blog
-> * Vote for other people's posts
-> * Comment on other people's posts
+> * Expose corruption cases by posting them in the application
+> * view cases posted by other users
+> * Comment on the cases posted by other users
 > * create an account, login and update your profile 
 
 ### BDD
 | Behaviour    | input     | output     |
 | -------------| :--------:| -----------|
-| View all posts | Home page displays all posts  | Home page displays all posts |
+| Home Page | displays all cases  | All cases reported |
 |login| Click on **login**|allows user to login into the account using the login form|
-|create an account| Click on **sign in**|form which allos users to sign in for the first time|
-|post a blog| Click on **Post Blog**|brings an input form for posting a blog|
-|like a post/dislike| Click on **like/dislike**|The number of likes and dislikes increases by one |
-|comment on a post| Click on **comment**|Display a comment box to allow users to post a comment on a specific blog|
+|create an account| Click on **sign in**|form which allows users to sign in for the first time|
+|post cases| Click on **Report Here**|displays an input form for posting a case|
+|comment on a case| Click on **comment**|Displays a comment box to allow users to post a comment on a specific case|
 |Update profile| Click on **Profile** |Takes the user to the profile page with options to edit and upload profile picture|
 
 ## Getting started
@@ -32,9 +32,9 @@ As a user of the application, you will be able to:
 #### Cloning
 Navigate into the folder you want the application to be
 In your terminal, run the commands
-  > $ git clone https://github.com/Jmos-Mbugua/The-Blog
+  > $ git clone https://github.com/Jmos-Mbugua/corruption-feeds
   > 
-  > $ cd The-Blog
+  > $ cd corruption-feeds
 
 ### Running the application
 * Modify the start.sh file with your own api key
@@ -55,7 +55,7 @@ Html
 Bootstrap
 
 ### Known Bugs
-The gmail server port specified is not responding which means the welcome email is not sent
+No known bug
 ### License
 This project is Licensed under MIT.
 ©2019 Copyright.
