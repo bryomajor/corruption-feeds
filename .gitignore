@@ -3,4 +3,5 @@ virtual/
 /instance
 .start.sh
 .Procfile
-config.py
+
+
