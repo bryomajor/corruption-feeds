@@ -2,35 +2,31 @@
     <div class="container  text-center text-md-left">
         <div class="row">
             <div class="col-md-4 mx-auto">
-                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Footer Content</h5>
-                <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-                    consectetur
-                    adipisicing elit.
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Corruption Feed</h5>
+                <p>Corruption Feed is a web application that allows locals to post corruption cases that they have
+                    witnessed or encountered.
                 </p>
 
             </div>
             <hr class="clearfix w-100 d-md-none">
-            <div class="col-md-2 mx-auto">
-                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+            <div class="col-md-4 mx-auto text-center">
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Quick Links</h5>
                 <ul class="list-unstyled">
                     <li>
-                        <a href="#!">Link 1</a>
+                        <a href="{{ url_for('main.add')}}">Report A Case</a>
                     </li>
                     <li>
-                        <a href="#!">Link 2</a>
+                        <a href="https://www.eacc.go.ke/">EACC Website</a>
                     </li>
                     <li>
-                        <a href="#!">Link 3</a>
-                    </li>
-                    <li>
-                        <a href="#!">Link 4</a>
+                        <a href="https://www.acauthorities.org/country/ke">Anti-Corruption Authorities</a>
                     </li>
                 </ul>
 
             </div>
             <hr class="clearfix w-100 d-md-none">
-            <div class="col-md-6 mb-4">
-
+            <div class="col-md-4">
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Subscribe to Feeds</h5>
                 <form class="input-group ">
                     <input type="text" class="form-control form-control-sm" placeholder="Your email"
                         aria-label="Your email" aria-describedby="basic-addon2">
@@ -60,22 +56,12 @@
                 <i class="fab fa-google-plus-g"> </i>
             </a>
         </li>
-        <li class="list-inline-item">
-            <a class="btn-floating btn-li mx-1">
-                <i class="fab fa-linkedin-in"> </i>
-            </a>
-        </li>
-        <li class="list-inline-item">
-            <a class="btn-floating btn-dribbble mx-1">
-                <i class="fab fa-dribbble"> </i>
-            </a>
-        </li>
     </ul>
     <!-- Social buttons -->
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2019 Copyright:
-        <a href="https://mdbootstrap.com/education/bootstrap/"> www.corruptionfree.co.ke</a>
+    <div class="footer-copyright text-center py-3">Copyright &copy; 2019
+        <a href="{{url_for('main.index')}}">Corruption Feed. </a>All Rights Reserved.
     </div>
     <!-- Copyright -->
 
