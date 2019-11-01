@@ -1,19 +1,9 @@
-<<<<<<< HEAD
 from flask import render_template,redirect,url_for, abort,request,flash
 from . import main
 from .forms import CommentsForm, UpdateProfile, CaseForm
 from ..models import User, Case,Comment,Upvote
 from flask_login import login_required, current_user
 from .. import db, photos
-import markdown2
-=======
-from app.main import main
-from flask import render_template, abort,request,redirect,url_for
-from flask_login import login_user,login_required,logout_user
-from .forms import UpdateProfile
-from app.models import User,Comment,Case
-from .. import db,photos
->>>>>>> 85ae5e70d2687efe300896bc041d72ac1384b0e9
 
 @main.route('/')
 def index():
